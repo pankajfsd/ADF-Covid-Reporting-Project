@@ -1,0 +1,45 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "covidreportproject-adf"
+		},
+		"ls_ablob_covidprojsa_connectionString": {
+			"value": ""
+		},
+		"ls_adls_covidprojadls_accountKey": {
+			"value": ""
+		},
+		"ls_databricks_covid_cluster_accessToken": {
+			"value": ""
+		},
+		"ls_sql_db_password": {
+			"value": ""
+		},
+		"ls_adls_covidprojadls_properties_typeProperties_url": {
+			"value": "https://covidprojadls.dfs.core.windows.net/"
+		},
+		"ls_http_ecdc_raw_data_properties_typeProperties_url": {
+			"value": "@{linkedService().baseURL}"
+		},
+		"ls_sql_db_properties_typeProperties_server": {
+			"value": "covid-sqldb-server.database.windows.net"
+		},
+		"ls_sql_db_properties_typeProperties_database": {
+			"value": "covid-db"
+		},
+		"ls_sql_db_properties_typeProperties_userName": {
+			"value": "sql-admin"
+		},
+		"tr_population_data_properties_typeProperties_scope": {
+			"value": "/subscriptions/c9939a34-52b0-4a0a-9cb5-6a03f1daff58/resourceGroups/covid-proj-rg/providers/Microsoft.Storage/storageAccounts/covidprojsa"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
