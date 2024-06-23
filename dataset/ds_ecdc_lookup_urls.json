@@ -1,0 +1,40 @@
+{
+	"name": "ds_ecdc_lookup_urls",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_ablob_covidprojsa",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "lookup"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "lookup_file.csv",
+				"container": "lookup"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "baseURL",
+				"type": "String"
+			},
+			{
+				"name": " relativeURL",
+				"type": "String"
+			},
+			{
+				"name": " fileName",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
